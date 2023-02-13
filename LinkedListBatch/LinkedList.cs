@@ -23,7 +23,7 @@ namespace LinkedListBatch
             }
             else
             {
-                Node temp = head;
+                Node temp = this.head;
                 while (temp.next != null)
                 {
                     temp = temp.next;
@@ -105,6 +105,29 @@ namespace LinkedListBatch
             else
             {
                 this.head = this.head.next;
+            }
+        }
+        /// <summary>
+        /// uc6 Remove last data
+        /// </summary>
+        public void RemoveLastData()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            else if (this.head.next == null)
+            {
+                this.head = null;
+            }
+            else
+            {
+                Node newNode = this.head;
+                while (newNode.next.next != null)
+                {
+                    newNode = newNode.next;
+                }
+                newNode.next = null;
             }
         }
         /// <summary>
