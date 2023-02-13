@@ -131,6 +131,21 @@ namespace LinkedListBatch
             }
         }
         /// <summary>
+        /// Uc7-Search Data present in linked list
+        /// </summary>
+        /// <param name="value"></param>
+        public int Search(int value)
+        {
+            if (this.head.data == value)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        /// <summary>
         /// Display Linked List
         /// </summary>
         public void Display()

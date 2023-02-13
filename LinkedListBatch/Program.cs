@@ -10,7 +10,7 @@
             while (flag)
             {
                 Console.WriteLine("Hint 1.Add data\n2.Reverse Add Data\n3Appending\n4.Insert data at particular position\n" +
-                    "5.Remove First \n 6.Remove Last data \n7.Exit");
+                    "5.Remove First \n 6.Remove Last data \n 7.Search\n8.Exit");
                 int choice = Convert.ToInt16(Console.ReadLine());
                 switch (choice)
                 {
@@ -47,6 +47,17 @@
                         linkedList.Display();
                         break;
                     case 7:
+                        int a =linkedList.Search(50);
+                        if (a.Equals(1))
+                        {
+                            Console.WriteLine("Data is present");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Data is not present");
+                        }
+                        break;
+                    case 8:
                         flag = false;
                         Console.WriteLine("Exist");
                         break;
