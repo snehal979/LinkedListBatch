@@ -94,6 +94,20 @@ namespace LinkedListBatch
             }
         }
         /// <summary>
+        /// uc5 First data delect
+        /// </summary>
+        public void RemoveFirstData()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            else
+            {
+                this.head = this.head.next;
+            }
+        }
+        /// <summary>
         /// Display Linked List
         /// </summary>
         public void Display()
