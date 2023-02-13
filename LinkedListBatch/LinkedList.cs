@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -169,6 +170,51 @@ namespace LinkedListBatch
                 }
                 return count;
             }
+        }
+        /// <summary>
+        /// Uc9 Delect and count size
+        /// </summary>
+        /// <returns></returns>
+        public int Size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data+" ");
+                temp = temp.next;
+                count++;
+            }
+            return count;
+        }
+        /// <summary>
+        /// Uc9_Delect at particular position
+        /// </summary>
+        /// <param name="position"></param>
+        public void DelectAtParticularPosition(int position)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            Node temp = this.head;
+            if (position == 0)
+            {
+                this.head = temp.next;
+            }
+            int count = 0;
+            while (temp != null && count < position)
+            {
+                temp = temp.next;
+                count++;
+            }
+            Node next = temp.next.next;
+            temp.next = next;
+            Size();
         }
         /// <summary>
         /// Display Linked List

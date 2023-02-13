@@ -10,7 +10,7 @@
             while (flag)
             {
                 Console.WriteLine("Hint 1.Add data\n2.Reverse Add Data\n3Appending\n4.Insert data at particular position\n" +
-                    "5.Remove First \n 6.Remove Last data \n 7.Search\n8.Data add At Postion\n8.Exit");
+                    "5.Remove First \n 6.Remove Last data \n 7.Search\n8.Data add At Postion\n9.Size \n10.Delect at particular position \n11.Exit");
                 int choice = Convert.ToInt16(Console.ReadLine());
                 switch (choice)
                 {
@@ -64,6 +64,13 @@
                         linkedList.Display();
                         break;
                     case 9:
+                        int size =linkedList.Size();
+                        Console.WriteLine("size of the linked list"+size);
+                        break;
+                    case 10:
+                        linkedList.DelectAtParticularPosition(1);
+                        break;
+                    case 11:
                         flag = false;
                         Console.WriteLine("Exist");
                         break;

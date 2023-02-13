@@ -44,6 +44,20 @@ namespace LinkedListBatchTesting
             int actual = 1; // 40 at 1 position
             Assert.AreEqual(actual, SearchData);
         }
-
+        /// <summary>
+        /// Uc9-Data add at particular position
+        /// </summary>
+        [TestMethod]
+        public void DelectData_WhenAnalyse_ShouldAddDataLinkedList()
+        {
+            AddData_WhenAnalyse_ShouldAddDataLinkedList();
+            int beforSize = linkedList.Size();//3
+            linkedList.InsertedAtParticularPosition(1, 40);
+            linkedList.DelectAtParticularPosition(1);
+            //linkedList.Display();
+            //AAA test method
+            int afterSize = linkedList.Size();//3
+            Assert.AreEqual(afterSize, beforSize);
+        }
     }
 }
