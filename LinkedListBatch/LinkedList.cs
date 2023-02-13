@@ -15,7 +15,7 @@ namespace LinkedListBatch
         /// Uc1 Add Data On Linked List
         /// </summary>
         /// <param name="data"></param>
-        public void Add(int data)
+        public int Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -31,7 +31,9 @@ namespace LinkedListBatch
                 }
                 temp.next = node;
             }
-           // Console.WriteLine("{0} inserted into Linked List", node.data);
+            Console.WriteLine("{0} inserted into Linked List", node.data);
+            return node.data;
+            
         }
         /// <summary>
         /// Uc2 Add Data In Reverse Order
@@ -215,6 +217,39 @@ namespace LinkedListBatch
             Node next = temp.next.next;
             temp.next = next;
             Size();
+        }
+        /// <summary>
+        /// Uc10 Sort Data
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public void SortOrderLinkedList()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("n");
+            }
+            else
+            {
+                int temp; //variable for swapping
+                Node current = this.head;
+                Node index = null;
+                while (current != null)
+                {
+                    index = current.next;
+                    while (index != null)
+                    {
+                        if (current.data.CompareTo(index.data)>0)
+                        {
+                            temp = current.data;
+                            current.data = index.data;
+                            index.data = temp;
+                        }
+                        index = index.next;
+                    }
+                    current = current.next;
+                }
+            }
         }
         /// <summary>
         /// Display Linked List
