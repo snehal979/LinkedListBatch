@@ -9,7 +9,7 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Hint 1.Add data 2.Reverse Add Data 3Appending 4.Exit");
+                Console.WriteLine("Hint 1.Add data 2.Reverse Add Data 3Appending 4.Insert data at particular position5.Exit");
                 int choice = Convert.ToInt16(Console.ReadLine());
                 switch (choice)
                 {
@@ -32,6 +32,12 @@
                         linkedList.Display();
                         break;
                     case 4:
+                        linkedList.Add(56);
+                        linkedList.Add(70);
+                        linkedList.InsertedAtParticularPosition(1, 30);
+                        linkedList.Display();
+                        break;
+                    case 5:
                         flag = false;
                         Console.WriteLine("Exist");
                         break;

@@ -60,6 +60,40 @@ namespace LinkedListBatch
             AddInReverseOrder(data);
         }
         /// <summary>
+        /// Uc4-Insert data in particular position
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="data"></param>
+        public void InsertedAtParticularPosition(int position, int data)
+        {
+            Node newestNode = new Node(data);
+            if (this.head == null)
+            {
+                Console.WriteLine(newestNode);
+            }
+            if (position==0)
+            {
+                newestNode.next = this.head;
+                this.head = newestNode;
+                Console.WriteLine(this.head);
+            }
+            else
+            {
+                Node prev = null;
+                Node current = this.head;
+                int count = 0;
+                while (current != null && count < position)
+                {
+                    prev = current;
+                    current = current.next;
+                    count++;
+                }
+                newestNode.next  = prev.next;
+                prev.next =newestNode;
+                Console.WriteLine(this.head);
+            }
+        }
+        /// <summary>
         /// Display Linked List
         /// </summary>
         public void Display()
