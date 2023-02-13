@@ -30,7 +30,7 @@ namespace LinkedListBatch
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into Linked List", node.data);
+           // Console.WriteLine("{0} inserted into Linked List", node.data);
         }
         /// <summary>
         /// Uc2 Add Data In Reverse Order
@@ -49,7 +49,15 @@ namespace LinkedListBatch
                 head = newNode;
                 head.next= temp;
             }
-            Console.WriteLine("{0} inserted into Linked List", newNode.data);
+           // Console.WriteLine("{0} inserted into Linked List", newNode.data);
+        }
+        /// <summary>
+        /// Uc3 Appending data
+        /// </summary>
+        /// <param name="data"></param>
+        public void Appending(int data)
+        {
+            AddInReverseOrder(data);
         }
         /// <summary>
         /// Display Linked List
