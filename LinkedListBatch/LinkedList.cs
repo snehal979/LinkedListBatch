@@ -134,15 +134,40 @@ namespace LinkedListBatch
         /// Uc7-Search Data present in linked list
         /// </summary>
         /// <param name="value"></param>
-        public int Search(int value)
+        
+        //public int Search(int value)
+        //{
+        //    Node temp = this.head;
+
+        //    if (temp.data == value)
+        //    {
+        //        return 1;
+        //    }
+        //    else
+        //    {
+        //        return -1;
+        //    }
+        //}
+        public int SearchNew(int data)
         {
-            if (this.head.data == value)
+            Node temp = head;
+            int count = 0;
+            if (temp == null)
             {
-                return 1;
+                return -1;
             }
             else
             {
-                return -1;
+                while (temp!=null)
+                {
+                    if (temp.data==data)
+                    {
+                        count++;
+                        break;
+                    }
+                    temp =temp.next;
+                }
+                return count;
             }
         }
         /// <summary>
